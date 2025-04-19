@@ -1,4 +1,5 @@
 import 'package:exam/widgets/button.dart';
+import 'package:exam/widgets/currency_dart.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -74,6 +75,30 @@ class App extends StatelessWidget {
                   ),
                 ],
               ),
+              const SizedBox(height: 100),
+              Row(
+                crossAxisAlignment: CrossAxisAlignment.end,
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  const Text(
+                    'Wallets',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 36,
+                      fontWeight: FontWeight.w600,
+                    ),
+                  ),
+                  Text(
+                    'View All',
+                    style: TextStyle(
+                      color: Colors.white.withAlpha(204),
+                      fontSize: 18,
+                    ),
+                  ),
+                ],
+              ),
+              const SizedBox(height: 20),
+              CurrencyCard(name: 'Euro', code: 'EUR', amount: '6 428', icon: Icons.euro_rounded, isInverted: false,)
             ],
           ),
         ),
